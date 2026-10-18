@@ -1,0 +1,674 @@
+{
+  "run": {
+    "started_at": "2026-10-18T18:19:00+00:00",
+    "resumed": false,
+    "finished_at": "2026-10-18T18:20:25+00:00",
+    "git_commit": "266b3b1",
+    "golden_file": "golden.jsonl",
+    "questions": 10,
+    "answerable": 7,
+    "unanswerable": 3,
+    "k": 5,
+    "retrieval_only": false,
+    "embed_model": "gemini-embedding-2",
+    "embed_dim": 1536,
+    "gen_models": [
+      "gemini-3.5-flash-lite",
+      "gemini-3.1-flash-lite"
+    ],
+    "backend": "gemini_api"
+  },
+  "systems": {
+    "vector": {
+      "hit_rate_at_5": 1.0,
+      "hits_at_5": "7/7",
+      "correct_refusal_rate": 1.0,
+      "correct_refusals": "3/3",
+      "false_refusal_rate": 0.0,
+      "false_refusals": "0/7",
+      "mean_latency_ms": {
+        "embed": 407.9,
+        "retrieve": 535.1,
+        "generate": 1765.3,
+        "total": 2708.4
+      },
+      "p50_total_latency_ms": 1904.5,
+      "mean_tokens_per_request": {
+        "prompt": 614.6,
+        "output": 31.3,
+        "thinking": 0.0,
+        "total": 645.9
+      },
+      "models_used": {
+        "gemini-3.5-flash-lite": 10
+      },
+      "requests": 10,
+      "errors": 0
+    },
+    "keyword": {
+      "hit_rate_at_5": 1.0,
+      "hits_at_5": "7/7",
+      "correct_refusal_rate": 1.0,
+      "correct_refusals": "3/3",
+      "false_refusal_rate": 0.286,
+      "false_refusals": "2/7",
+      "mean_latency_ms": {
+        "embed": 0.0,
+        "retrieve": 7.0,
+        "generate": 1758.6,
+        "total": 1765.8
+      },
+      "p50_total_latency_ms": 899.5,
+      "mean_tokens_per_request": {
+        "prompt": 673.9,
+        "output": 29.6,
+        "thinking": 0.0,
+        "total": 703.5
+      },
+      "models_used": {
+        "gemini-3.5-flash-lite": 10
+      },
+      "requests": 10,
+      "errors": 0
+    }
+  },
+  "per_question": [
+    {
+      "id": "d01",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:00+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 512.2,
+        "retrieve": 435.6,
+        "generate": 905.6,
+        "total": 1853.5
+      },
+      "tokens": {
+        "prompt": 535,
+        "output": 35,
+        "thinking": 0,
+        "total": 570
+      },
+      "cited_notes": [
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md"
+      ],
+      "retrieved_notes": [
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d01",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:04+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 0.4,
+        "generate": 873.2,
+        "total": 873.6
+      },
+      "tokens": {
+        "prompt": 727,
+        "output": 37,
+        "thinking": 0,
+        "total": 764
+      },
+      "cited_notes": [
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md"
+      ],
+      "retrieved_notes": [
+        "wiki/tasks.md",
+        "wiki/career/recruiting.md",
+        "wiki/health/fitness-plan.md",
+        "raw-sources/journal/2026-01-05-example.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d02",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:07+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 336.7,
+        "retrieve": 481.2,
+        "generate": 805.8,
+        "total": 1623.8
+      },
+      "tokens": {
+        "prompt": 549,
+        "output": 31,
+        "thinking": 0,
+        "total": 580
+      },
+      "cited_notes": [
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md"
+      ],
+      "retrieved_notes": [
+        "wiki/tasks.md",
+        "wiki/career/recruiting.md",
+        "wiki/personal/goals-example.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d02",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:11+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 27.0,
+        "generate": 792.0,
+        "total": 820.0
+      },
+      "tokens": {
+        "prompt": 586,
+        "output": 17,
+        "thinking": 0,
+        "total": 603
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/personal/goals-example.md",
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md",
+        "wiki/index.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d03",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:14+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 555.0,
+        "retrieve": 606.5,
+        "generate": 750.3,
+        "total": 1911.9
+      },
+      "tokens": {
+        "prompt": 857,
+        "output": 43,
+        "thinking": 0,
+        "total": 900
+      },
+      "cited_notes": [
+        "wiki/health/pattern-tracker-example.md"
+      ],
+      "retrieved_notes": [
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/tasks.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d03",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:17+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 7.6,
+        "generate": 712.1,
+        "total": 719.8
+      },
+      "tokens": {
+        "prompt": 875,
+        "output": 40,
+        "thinking": 0,
+        "total": 915
+      },
+      "cited_notes": [
+        "wiki/health/pattern-tracker-example.md"
+      ],
+      "retrieved_notes": [
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/tasks.md",
+        "wiki/health/fitness-plan.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d04",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:20+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 377.8,
+        "retrieve": 746.8,
+        "generate": 801.1,
+        "total": 1925.8
+      },
+      "tokens": {
+        "prompt": 575,
+        "output": 29,
+        "thinking": 0,
+        "total": 604
+      },
+      "cited_notes": [
+        "wiki/health/fitness-plan.md"
+      ],
+      "retrieved_notes": [
+        "wiki/health/fitness-plan.md",
+        "wiki/index.md",
+        "wiki/personal/goals-example.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d04",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:24+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 0.4,
+        "generate": 596.4,
+        "total": 596.8
+      },
+      "tokens": {
+        "prompt": 769,
+        "output": 23,
+        "thinking": 0,
+        "total": 792
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/health/fitness-plan.md",
+        "wiki/hub.md",
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/index.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d05",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:27+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 376.4,
+        "retrieve": 446.3,
+        "generate": 1074.2,
+        "total": 1897.0
+      },
+      "tokens": {
+        "prompt": 636,
+        "output": 34,
+        "thinking": 0,
+        "total": 670
+      },
+      "cited_notes": [
+        "wiki/career/recruiting.md"
+      ],
+      "retrieved_notes": [
+        "wiki/career/recruiting.md",
+        "raw-sources/articles/example-industry-article.md",
+        "wiki/career/professional-experience.md",
+        "wiki/hub.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d05",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:31+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 27.8,
+        "generate": 981.5,
+        "total": 1010.0
+      },
+      "tokens": {
+        "prompt": 597,
+        "output": 34,
+        "thinking": 0,
+        "total": 631
+      },
+      "cited_notes": [
+        "wiki/career/recruiting.md"
+      ],
+      "retrieved_notes": [
+        "wiki/career/recruiting.md",
+        "raw-sources/articles/example-industry-article.md",
+        "wiki/career/professional-experience.md",
+        "wiki/index.md",
+        "wiki/personal/goals-example.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d06",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:34+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 409.4,
+        "retrieve": 415.4,
+        "generate": 903.7,
+        "total": 1728.8
+      },
+      "tokens": {
+        "prompt": 696,
+        "output": 45,
+        "thinking": 0,
+        "total": 741
+      },
+      "cited_notes": [
+        "raw-sources/journal/2026-01-05-example.md"
+      ],
+      "retrieved_notes": [
+        "raw-sources/journal/2026-01-05-example.md",
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/tasks.md",
+        "wiki/career/recruiting.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d06",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:37+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 1.1,
+        "generate": 924.3,
+        "total": 925.5
+      },
+      "tokens": {
+        "prompt": 760,
+        "output": 48,
+        "thinking": 0,
+        "total": 808
+      },
+      "cited_notes": [
+        "raw-sources/journal/2026-01-05-example.md",
+        "wiki/tasks.md"
+      ],
+      "retrieved_notes": [
+        "wiki/tasks.md",
+        "raw-sources/journal/2026-01-05-example.md",
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/health/fitness-plan.md",
+        "wiki/index.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d07",
+      "system": "vector",
+      "answerable": true,
+      "at": "2026-10-18T18:19:40+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 360.8,
+        "retrieve": 461.4,
+        "generate": 1026.3,
+        "total": 1849.2
+      },
+      "tokens": {
+        "prompt": 446,
+        "output": 33,
+        "thinking": 0,
+        "total": 479
+      },
+      "cited_notes": [
+        "wiki/personal/goals-example.md"
+      ],
+      "retrieved_notes": [
+        "wiki/personal/goals-example.md",
+        "wiki/hub.md",
+        "wiki/index.md",
+        "wiki/career/recruiting.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d07",
+      "system": "keyword",
+      "answerable": true,
+      "at": "2026-10-18T18:19:44+00:00",
+      "refused": false,
+      "refusal_reason": null,
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 2.5,
+        "generate": 774.0,
+        "total": 776.7
+      },
+      "tokens": {
+        "prompt": 446,
+        "output": 28,
+        "thinking": 0,
+        "total": 474
+      },
+      "cited_notes": [
+        "wiki/personal/goals-example.md"
+      ],
+      "retrieved_notes": [
+        "wiki/personal/goals-example.md",
+        "wiki/career/recruiting.md",
+        "wiki/hub.md",
+        "wiki/index.md"
+      ],
+      "hit": true
+    },
+    {
+      "id": "d08",
+      "system": "vector",
+      "answerable": false,
+      "at": "2026-10-18T18:19:47+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 370.6,
+        "retrieve": 459.1,
+        "generate": 2252.8,
+        "total": 3082.5
+      },
+      "tokens": {
+        "prompt": 574,
+        "output": 23,
+        "thinking": 0,
+        "total": 597
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md",
+        "wiki/hub.md"
+      ],
+      "hit": null
+    },
+    {
+      "id": "d08",
+      "system": "keyword",
+      "answerable": false,
+      "at": "2026-10-18T18:19:52+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 0.8,
+        "generate": 3564.1,
+        "total": 3564.9
+      },
+      "tokens": {
+        "prompt": 692,
+        "output": 23,
+        "thinking": 0,
+        "total": 715
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/personal/goals-example.md",
+        "wiki/career/recruiting.md",
+        "wiki/tasks.md",
+        "raw-sources/journal/2026-01-05-example.md"
+      ],
+      "hit": null
+    },
+    {
+      "id": "d09",
+      "system": "vector",
+      "answerable": false,
+      "at": "2026-10-18T18:19:58+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 290.1,
+        "retrieve": 460.1,
+        "generate": 4480.2,
+        "total": 5230.5
+      },
+      "tokens": {
+        "prompt": 732,
+        "output": 17,
+        "thinking": 0,
+        "total": 749
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/health/fitness-plan.md",
+        "raw-sources/journal/2026-01-05-example.md",
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/tasks.md"
+      ],
+      "hit": null
+    },
+    {
+      "id": "d09",
+      "system": "keyword",
+      "answerable": false,
+      "at": "2026-10-18T18:20:05+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 2.1,
+        "generate": 2635.9,
+        "total": 2638.1
+      },
+      "tokens": {
+        "prompt": 542,
+        "output": 23,
+        "thinking": 0,
+        "total": 565
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/health/pattern-tracker-example.md",
+        "wiki/career/recruiting.md"
+      ],
+      "hit": null
+    },
+    {
+      "id": "d10",
+      "system": "vector",
+      "answerable": false,
+      "at": "2026-10-18T18:20:10+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 489.8,
+        "retrieve": 838.6,
+        "generate": 4652.8,
+        "total": 5981.4
+      },
+      "tokens": {
+        "prompt": 546,
+        "output": 23,
+        "thinking": 0,
+        "total": 569
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/hub.md",
+        "wiki/index.md",
+        "raw-sources/journal/2026-01-05-example.md"
+      ],
+      "hit": null
+    },
+    {
+      "id": "d10",
+      "system": "keyword",
+      "answerable": false,
+      "at": "2026-10-18T18:20:18+00:00",
+      "refused": true,
+      "refusal_reason": "model",
+      "model": "gemini-3.5-flash-lite",
+      "latency_ms": {
+        "embed": 0.0,
+        "retrieve": 0.5,
+        "generate": 5732.1,
+        "total": 5732.6
+      },
+      "tokens": {
+        "prompt": 745,
+        "output": 23,
+        "thinking": 0,
+        "total": 768
+      },
+      "cited_notes": [],
+      "retrieved_notes": [
+        "wiki/health/pattern-tracker-example.md",
+        "raw-sources/journal/2026-01-05-example.md"
+      ],
+      "hit": null
+    }
+  ]
+}

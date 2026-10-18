@@ -118,7 +118,18 @@ COLLECTION_PREFIX=demo_ .venv/bin/python -m evals.run_eval --golden evals/demo/g
 .venv/bin/python -m evals.report evals/demo/results.json
 ```
 
-DEMO_TABLE_PLACEHOLDER
+| Metric | vector | keyword |
+|---|---|---|
+| Retrieval hit rate @ 5 (answerable) | 100% (7/7) | 100% (7/7) |
+| Correct refusal (unanswerable) | 100% (3/3) | 100% (3/3) |
+| False refusal (answerable) | 0% (0/7) | 29% (2/7) |
+| Mean latency, total (ms) | 2,708 | 1,766 |
+| Median latency, total (ms) | 1,904 | 900 |
+| Mean latency, retrieval only (ms) | 943 | 7 |
+| Mean tokens / request (total) | 646 | 704 |
+| Errors (all models unavailable) | 0/10 | 0/10 |
+
+10 questions (7 answerable, 3 unanswerable), `golden.jsonl`, k=5, embeddings `gemini-embedding-2`, generation `gemini-3.5-flash-lite, gemini-3.1-flash-lite`, commit `266b3b1`, run 2026-10-18T18:19:00+00:00.
 
 **How to read this honestly**
 
