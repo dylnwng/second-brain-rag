@@ -1,0 +1,7 @@
+google-genai>=1.30
+google-cloud-firestore>=2.21
+pyyaml>=6.0
+python-dotenv>=1.0
+tenacity>=9.0
+fastapi>=0.115
+uvicorn>=0.32

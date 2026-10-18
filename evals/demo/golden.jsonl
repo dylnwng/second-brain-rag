@@ -1,0 +1,10 @@
+{"id": "d01", "question": "Which company am I applying to where I already have someone vouching for me?", "answerable": true, "expected_notes": ["wiki/career/recruiting.md", "wiki/tasks.md"], "reference": "ExampleCorp (referral via a friend)"}
+{"id": "d02", "question": "What's holding up all of my job applications?", "answerable": true, "expected_notes": ["wiki/tasks.md", "wiki/career/recruiting.md"], "reference": "the resume fix"}
+{"id": "d03", "question": "How many weigh-ins do I need before I can say my weight is trending somewhere?", "answerable": true, "expected_notes": ["wiki/health/pattern-tracker-example.md"], "reference": "5+ data points"}
+{"id": "d04", "question": "What kind of training is scheduled for the middle of the week?", "answerable": true, "expected_notes": ["wiki/health/fitness-plan.md"], "reference": "Wednesday: conditioning / cardio"}
+{"id": "d05", "question": "How long does ExampleCorp's summer program last?", "answerable": true, "expected_notes": ["wiki/career/recruiting.md"], "reference": "8-week rotational program"}
+{"id": "d06", "question": "What did the scale say at my first check-in in January?", "answerable": true, "expected_notes": ["raw-sources/journal/2026-01-05-example.md"], "reference": "150 lbs"}
+{"id": "d07", "question": "What job am I ultimately hoping to land after school?", "answerable": true, "expected_notes": ["wiki/personal/goals-example.md"], "reference": "a full-time offer in product management"}
+{"id": "d08", "question": "What salary did ExampleCorp offer me?", "answerable": false, "expected_notes": [], "reference": "no offer recorded"}
+{"id": "d09", "question": "How much did I bench press last week?", "answerable": false, "expected_notes": [], "reference": "no lift numbers logged"}
+{"id": "d10", "question": "What is the boiling point of water at sea level?", "answerable": false, "expected_notes": [], "reference": "out of scope; no-outside-knowledge test"}

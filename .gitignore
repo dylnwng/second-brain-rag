@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+# Ingestion run reports can contain note paths from a private vault.
+runs/
+evals/answers.jsonl
+.DS_Store
+evals/**/answers.jsonl

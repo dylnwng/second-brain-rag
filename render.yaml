@@ -1,0 +1,30 @@
+# Render Blueprint: free-tier deploy of the same Docker image Cloud Run would run.
+# Secrets are `sync: false`: Render asks for them in its dashboard on first deploy, so
+# they never live in this repo.
+services:
+  - type: web
+    name: second-brain-rag
+    runtime: docker
+    plan: free
+    region: ohio            # closest Render region to Firestore in us-central1 (Iowa)
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit
+    envVars:
+      - key: GENAI_BACKEND
+        value: gemini_api
+      - key: EMBED_MODEL
+        value: gemini-embedding-2
+      - key: EMBED_DIM
+        value: "1536"
+      - key: GEN_MODELS
+        value: gemini-3.6-flash,gemini-3.5-flash,gemini-3.5-flash-lite,gemini-3.1-flash-lite
+      - key: TOP_K
+        value: "5"
+      # Secrets (entered in the Render dashboard, never committed):
+      - key: GEMINI_API_KEY          # AI Studio key
+        sync: false
+      - key: GOOGLE_CREDENTIALS_JSON # read-only (datastore.viewer) service-account key JSON
+        sync: false
+      - key: ASK_TOKEN               # bearer token required by POST /ask
+        sync: false

@@ -1,0 +1,76 @@
+{
+  "run": {
+    "started_at": "2026-10-18T17:04:03+00:00",
+    "resumed": false,
+    "finished_at": "2026-10-18T17:06:40+00:00",
+    "git_commit": "3209058",
+    "golden_file": "golden.jsonl",
+    "questions": 20,
+    "answerable": 15,
+    "unanswerable": 5,
+    "k": 5,
+    "retrieval_only": false,
+    "embed_model": "gemini-embedding-2",
+    "embed_dim": 1536,
+    "gen_models": [
+      "gemini-3.5-flash-lite",
+      "gemini-3.1-flash-lite"
+    ],
+    "backend": "gemini_api"
+  },
+  "systems": {
+    "vector": {
+      "hit_rate_at_5": 1.0,
+      "hits_at_5": "15/15",
+      "correct_refusal_rate": 1.0,
+      "correct_refusals": "5/5",
+      "false_refusal_rate": 0.0,
+      "false_refusals": "0/15",
+      "mean_latency_ms": {
+        "embed": 566.5,
+        "retrieve": 751.4,
+        "generate": 1120.7,
+        "total": 2438.6
+      },
+      "p50_total_latency_ms": 2188.1,
+      "mean_tokens_per_request": {
+        "prompt": 1500.5,
+        "output": 74.3,
+        "thinking": 6.3,
+        "total": 1581.0
+      },
+      "models_used": {
+        "gemini-3.5-flash-lite": 20
+      },
+      "requests": 20,
+      "errors": 0
+    },
+    "keyword": {
+      "hit_rate_at_5": 0.867,
+      "hits_at_5": "13/15",
+      "correct_refusal_rate": 1.0,
+      "correct_refusals": "5/5",
+      "false_refusal_rate": 0.067,
+      "false_refusals": "1/15",
+      "mean_latency_ms": {
+        "embed": 0.0,
+        "retrieve": 7.4,
+        "generate": 1395.0,
+        "total": 1402.7
+      },
+      "p50_total_latency_ms": 1115.0,
+      "mean_tokens_per_request": {
+        "prompt": 1732.8,
+        "output": 54.5,
+        "thinking": 67.2,
+        "total": 1854.5
+      },
+      "models_used": {
+        "gemini-3.5-flash-lite": 20
+      },
+      "requests": 20,
+      "errors": 0
+    }
+  },
+  "note": "aggregate-only export; per-question rows withheld (private golden set)"
+}

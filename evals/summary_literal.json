@@ -1,0 +1,36 @@
+{
+  "run": {
+    "started_at": "2026-10-18T17:54:06+00:00",
+    "resumed": false,
+    "finished_at": "2026-10-18T17:54:46+00:00",
+    "git_commit": "d2fda88",
+    "golden_file": "golden_literal.jsonl",
+    "questions": 20,
+    "answerable": 15,
+    "unanswerable": 5,
+    "k": 5,
+    "retrieval_only": true,
+    "embed_model": "gemini-embedding-2",
+    "embed_dim": 1536,
+    "gen_models": [
+      "gemini-3.6-flash",
+      "gemini-3.5-flash",
+      "gemini-3.5-flash-lite",
+      "gemini-3.1-flash-lite"
+    ],
+    "backend": "gemini_api"
+  },
+  "systems": {
+    "vector": {
+      "hit_rate_at_5": 1.0,
+      "hits_at_5": "15/15",
+      "mean_retrieval_latency_ms": 1370.8
+    },
+    "keyword": {
+      "hit_rate_at_5": 1.0,
+      "hits_at_5": "15/15",
+      "mean_retrieval_latency_ms": 8.3
+    }
+  },
+  "note": "aggregate-only export; per-question rows withheld (private golden set)"
+}
